@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.ares.daemon</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Replace /usr/local/bin/ares with output of: which ares -->
+        <string>/usr/local/bin/ares</string>
+        <string>start</string>
+        <string>--daemon</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <key>StandardOutPath</key>
+    <string>REPLACE_WITH_ARES_HOME/logs/stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>REPLACE_WITH_ARES_HOME/logs/stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>ANTHROPIC_API_KEY</key>
+        <string>REPLACE_WITH_YOUR_KEY</string>
+        <key>PATH</key>
+        <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>REPLACE_WITH_HOME_DIR</string>
+</dict>
+</plist>
