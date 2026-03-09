@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.env
+.venv
+venv/
+ENV/
+
+# ARES runtime (not source)
+# These live in ~/.ares/ not in the repo

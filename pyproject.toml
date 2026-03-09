@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ares-system"
+version = "0.1.0"
+description = "ARES — Autonomous Reasoning & Execution System"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40.0",
+    "httpx>=0.27.0",
+    "click>=8.1.0",
+    "tomllib; python_version < '3.11'",
+    "tomli-w>=1.0.0",
+    "rich>=13.0.0",
+    "anyio>=4.0.0",
+]
+
+[project.optional-dependencies]
+screen = [
+    "pyautogui>=0.9.54",
+    "mss>=9.0.0",
+    "pytesseract>=0.3.10",
+    "Pillow>=10.0.0",
+]
+
+[project.scripts]
+ares = "ares.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ares*"]
